@@ -591,10 +591,6 @@ export default class Presentation extends React.Component {
                 <TableItem>RegExp (正規表達式)</TableItem>
                 <TableItem>/\.css$/</TableItem>
               </TableRow>
-              <TableRow>
-                <TableItem>Number (數字)</TableItem>
-                <TableItem>3.1415926</TableItem>
-              </TableRow>
             </Table>
           </BgSlide>
 
@@ -981,7 +977,7 @@ export default class Presentation extends React.Component {
               </TableRow>
               <TableRow>
                 <TableItem>click</TableItem>
-                <TableItem>發生處理狀況</TableItem>
+                <TableItem>點擊</TableItem>
               </TableRow>
               <TableRow>
                 <TableItem>focus</TableItem>
