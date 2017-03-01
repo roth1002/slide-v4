@@ -1,0 +1,16 @@
+// 同樣的 class 在同一頁 html 可以有很多個
+
+/*
+<div class="a-class"></div>
+<div class="a-class"></div>
+<div class="a-class"></div>
+*/
+
+// 用 class name string 當參數
+var targets = document.getElementsByClassName('a-class');
+
+// 取第一個符合條件的
+var target1 = targets[0];
+
+// 要注意會選到一個以上的東西
+// 它的值是個偽陣列，像是陣列又不是陣列

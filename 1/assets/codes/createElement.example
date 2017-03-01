@@ -1,0 +1,4 @@
+// 建立任何 tag element node
+
+// 用 tag name 當參數
+var newDiv = document.createElement('div');

@@ -1,0 +1,11 @@
+// 去聽事件，在發生的時候呼叫 function
+
+
+// <button id="target">是個按鈕</button>
+
+var targetElement = document.getElementById('target');
+
+targetElement.addEventListener('click', function() {
+  // ..做一些事，任何事，你希望按鈕按了要幹麻？
+  alert('你希望按鈕按了要幹麻？');
+});

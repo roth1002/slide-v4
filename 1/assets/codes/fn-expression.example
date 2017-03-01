@@ -1,0 +1,13 @@
+// 但在 JavaScript 裡面
+// `function` 是 first-class 的
+
+// 可以指定到變數中
+// 這樣則不會抬升，就依照定義那行的順序
+
+// 這種稱為 function expression
+// 如果我在這之前先呼叫 sum(1, 2) 會錯誤
+var sum = function(a, b) {
+  return a + b;
+};
+
+var result = sum(1, 2);

@@ -1,0 +1,19 @@
+// 查詢 classList
+
+var targetElement = document.getElementById('target');
+
+console.log(targetElement.classList);
+
+
+// 新增 class 到 classList
+
+var targetElement = document.getElementById('target');
+
+targetElement.classList.add('another-class');
+
+
+// 從 classList 移除 class
+
+var targetElement = document.getElementById('target');
+
+targetElement.classList.remove('another-class');

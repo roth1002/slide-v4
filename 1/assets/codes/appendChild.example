@@ -1,0 +1,23 @@
+// appendChild: 把 DOM Node 放到裡面的最後面
+
+/*
+<!-- before -->
+<div id="target">
+  <div id="div1"></div>
+  <div id="div2"></div>
+</div>
+*/
+
+var newDiv = document.createElement('div');
+var targetElement = document.getElementById('target');
+targetElement.appendChild(newDiv);
+
+
+/*
+<!-- after -->
+<div id="target">
+  <div id="div1"></div>
+  <div id="div2"></div>
+  <div></div>
+</div>
+*/

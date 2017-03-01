@@ -1,0 +1,17 @@
+<?php
+// 純屬亂寫，很可能不能跑
+// 現代 php 不會這樣寫
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+// 前後台混在一起
+if ($username === 'hello world') { ?>
+  <h1><? echo $username ?></h1>
+<? } else { ?>
+  <ul>
+<?   for ($i = 0; $i < 10 ; $i++) { ?>
+       <li><? echo $i ?></li>
+<?   } ?>
+  </ul>
+<? }

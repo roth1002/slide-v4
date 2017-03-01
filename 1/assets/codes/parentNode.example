@@ -1,0 +1,8 @@
+// Document 跟 DocumentFragment 沒有 parentNode
+
+// 所以檢查一下比較安全
+
+var node = document.getElementById('target');
+if (node.parentNode) {
+  node.parentNode.removeChild(node);
+}

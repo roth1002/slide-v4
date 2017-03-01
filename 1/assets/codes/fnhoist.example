@@ -1,0 +1,16 @@
+// JavaScript 的變數 scope 跟 c, c++ 等其他語言不太一樣
+// 區域變數活在 `function` 之中而不是在 block 之中
+
+function() {
+  for (var i = 0; i < 0; i++) {
+    console.log(i);
+  }
+}
+
+// 等同於
+function() {
+  var i;
+  for (i = 0; i < 0; i++) {
+    console.log(i);
+  }
+}

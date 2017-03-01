@@ -1,0 +1,6 @@
+// querySelector, querySelectorAll 是個 IE 8,9 才導入的 API
+
+// 可以用 css 的一部份 selector 來選取
+
+var el = document.querySelector('#test');
+var matches = el.querySelectorAll('div.highlighted > p');

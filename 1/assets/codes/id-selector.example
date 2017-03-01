@@ -1,0 +1,6 @@
+// 同樣的 id 在同一頁 html 只能有一個
+
+// <div id="target"></div>
+
+// 用 id string 當參數
+var target = document.getElementById('target');

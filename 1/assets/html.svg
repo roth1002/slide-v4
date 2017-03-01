@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="315" height="250" font-family="dejavu sans mono, monospace" font-size="12">
+<style type="text/css">
+.t{fill:#22205e;}
+.a{fill:#642b8f;}
+.v{fill:#c92028;}
+</style>
+<text xml:space="preserve">
+<tspan x="32" dy="16.6" fill="#ba892d">&lt;!DOCTYPE html></tspan>
+<tspan x="32" dy="16.6" class="t">&lt;html></tspan>
+<tspan x="32" dy="16.6" class="t">    &lt;head></tspan>
+<tspan x="32" dy="16.6">        <tspan class="t">&lt;title></tspan>Example<tspan class="t">&lt;title></tspan></tspan>
+<tspan x="32" dy="16.6">        <tspan class="t">&lt;link</tspan> <tspan class="a">rel</tspan>=<tspan class="v">"stylesheet"</tspan> <tspan class="a">href</tspan>=<tspan class="v">"styles.css"</tspan><tspan class="t">></tspan></tspan>
+<tspan x="32" dy="16.6" class="t">    &lt;/head></tspan>
+<tspan x="32" dy="16.6" class="t">    &lt;body></tspan>
+<tspan x="32" dy="16.6" class="t">        &lt;h1></tspan>
+<tspan x="32" dy="16.6">            <tspan class="t">&lt;a</tspan> <tspan class="a">href</tspan>=<tspan class="v">"/"</tspan>>Header<tspan class="t">&lt;/a></tspan></tspan>
+<tspan x="32" dy="16.6" class="t">        &lt;/h1></tspan>
+<tspan x="32" dy="16.6" class="t">        &lt;nav></tspan>
+<tspan x="32" dy="16.6">            <tspan class="t">&lt;a</tspan> <tspan class="a">href</tspan>=<tspan class="v">"one/"</tspan>>One<tspan class="t">&lt;/a></tspan></tspan>
+<tspan x="32" dy="16.6">            <tspan class="t">&lt;a</tspan> <tspan class="a">href</tspan>=<tspan class="v">"two/"</tspan>>Two<tspan class="t">&lt;/a></tspan></tspan>
+<tspan x="32" dy="16.6">            <tspan class="t">&lt;a</tspan> <tspan class="a">href</tspan>=<tspan class="v">"three/"</tspan>>Three<tspan class="t">&lt;/a></tspan></tspan>
+<tspan x="32" dy="16.6" class="t">        &lt;/nav></tspan>
+</text>
+<path d="M2,2h20v250h-20z" fill="#eee"/>
+<text text-anchor="end">
+<tspan x="19" dy="16.6">1</tspan>
+<tspan x="19" dy="16.6">2</tspan>
+<tspan x="19" dy="16.6">3</tspan>
+<tspan x="19" dy="16.6">4</tspan>
+<tspan x="19" dy="16.6">5</tspan>
+<tspan x="19" dy="16.6">6</tspan>
+<tspan x="19" dy="16.6">7</tspan>
+<tspan x="19" dy="16.6">8</tspan>
+<tspan x="19" dy="16.6">9</tspan>
+<tspan x="19" dy="16.6">10</tspan>
+<tspan x="19" dy="16.6">11</tspan>
+<tspan x="19" dy="16.6">12</tspan>
+<tspan x="19" dy="16.6">13</tspan>
+<tspan x="19" dy="16.6">14</tspan>
+<tspan x="19" dy="16.6">15</tspan>
+</text>
+</svg>

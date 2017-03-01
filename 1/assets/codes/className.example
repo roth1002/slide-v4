@@ -1,0 +1,12 @@
+// 查詢 className
+
+var targetElement = document.getElementById('target');
+
+console.log(targetElement.className);
+
+
+// 改變 className
+
+var targetElement = document.getElementById('target');
+
+targetElement.className = 'new-class';

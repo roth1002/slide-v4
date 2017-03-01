@@ -1,0 +1,12 @@
+// 查詢 style
+
+var targetElement = document.getElementById('target');
+
+console.log(targetElement.style.color);
+
+
+// 改變 style
+
+var targetElement = document.getElementById('target');
+
+targetElement.style.color = 'red';

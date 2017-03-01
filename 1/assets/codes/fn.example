@@ -1,0 +1,9 @@
+// 定義函數：是用 `function`
+
+// 像以下這樣定義一樣會自動抬升到最前面
+
+
+// 這種稱為 function declaration
+function sum(a, b) {
+  return a + b;
+}

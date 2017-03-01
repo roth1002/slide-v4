@@ -1,0 +1,4 @@
+// 建立 text node
+
+// 用字串當參數
+var newText = document.createTextNode('this is a text node');

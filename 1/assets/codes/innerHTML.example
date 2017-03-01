@@ -1,0 +1,17 @@
+// innerHTML: 插入 HTML 字串到 DOM Element
+
+/*
+<!-- before -->
+<div id="target"></div>
+*/
+
+var targetElement = document.getElementById('target');
+targetElement.innerHTML = '<div id="div1"></div><div id="div2"></div>';
+
+/*
+<!-- after -->
+<div id="target">
+  <div id="div1"></div>
+  <div id="div2"></div>
+</div>
+*/
