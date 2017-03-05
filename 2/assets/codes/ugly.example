@@ -1,0 +1,13 @@
+// go function
+function go(a,b, c,d){ return a+b-c/d}
+
+switch(act){
+case 'a':
+// TODO: there are some bugs here
+  case 'b':
+  break;
+ // case 'c':
+ //case 'd':
+ default:
+  return 1000
+}

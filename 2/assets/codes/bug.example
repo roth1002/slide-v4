@@ -1,0 +1,9 @@
+var banana = 1;
+
+// ...
+// after 1000 lines of code
+// ...
+
+if (bananana < 2) {
+  // never comes in
+}

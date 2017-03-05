@@ -1,0 +1,16 @@
+// OOP
+function Car(engine) {
+  this.engine = engine;
+}
+
+// or, in ES6
+class Car {
+  constructor(engine) {
+     this.engine = engine;
+  }
+}
+
+function Engine() {}
+
+var engine = new Engine();
+var car = new Car(engine);

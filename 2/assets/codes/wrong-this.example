@@ -1,0 +1,13 @@
+function DemoItem(item) {
+  this.internalItem = item;
+}
+
+DemoItem.prototype.show = function() {
+  console.log(this.internalItem);
+}
+
+var item = new DemoItem('demo');
+item.show(); // demo
+
+var show = item.show;
+show(); // undefined

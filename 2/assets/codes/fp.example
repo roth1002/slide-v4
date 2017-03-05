@@ -1,0 +1,16 @@
+// FP
+function compose(...funcs) {
+  return arg => funcs.reduceRight((composed, f) => f(composed), arg);
+}
+
+function add1(val) {
+  return val + 1;
+}
+
+function powerOf2(val) {
+  return val * val;
+}
+
+var add1ThenPowerOf2 = compose(powerOf2, add1);
+
+add1ThenPowerOf2(1) // 4

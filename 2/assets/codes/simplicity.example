@@ -1,0 +1,8 @@
+var num = 1;
+var bool = true;
+var str = 'This is a sentence.';
+var obj = {
+  name: 'John',
+  age: 18
+};
+var arr = [ 1, 2, 3 ];

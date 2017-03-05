@@ -1,0 +1,6 @@
+function demo() {
+  return; // the demo function will return nothing
+  {
+
+  }
+}

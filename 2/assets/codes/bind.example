@@ -1,0 +1,8 @@
+var log1 = console.log;
+log1('demo'); // Uncaught TypeError: Illegal invocation(…)
+
+var log2 = console.log.bind(console);
+log2('demo'); // 'demo'
+
+var log3 = console.log.bind(console, 'assign', 'other', 'args');
+log3(); // 'assign other args'

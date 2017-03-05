@@ -1,0 +1,4 @@
+element.addEventListener('click', function() {
+  // if this function has 'this'
+  // coder should be very careful
+});
