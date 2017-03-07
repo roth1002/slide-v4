@@ -1,4 +1,2 @@
-element.addEventListener('click', function() {
-  // if this function has 'this'
-  // coder should be very careful
-});
+document.addEventListener('click', item.show);
+// undefined

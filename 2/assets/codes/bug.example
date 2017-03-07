@@ -1,9 +1,8 @@
-var banana = 1;
+var someCondition = False;
 
 // ...
-// after 1000 lines of code
+// 寫了 10 小時的 code
+// 就忘了要使用這個變數
 // ...
 
-if (bananana < 2) {
-  // never comes in
-}
+

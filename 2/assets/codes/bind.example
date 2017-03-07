@@ -6,3 +6,6 @@ log2('demo'); // 'demo'
 
 var log3 = console.log.bind(console, 'assign', 'other', 'args');
 log3(); // 'assign other args'
+
+// 前一個範例
+document.addEventListener('click', item.show.bind(item));

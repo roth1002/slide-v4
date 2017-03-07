@@ -152,26 +152,6 @@ export default class Presentation extends React.Component {
           <BgSlide transition={["slide"]}>
             <CodePane
               lang="js"
-              source={require("raw!../assets/codes/semicolon-insertion-2.example")}
-              margin="0 20px 0"
-              textSize="0.6em"
-            />
-            <Text textColor="primary">
-              or
-            </Text>
-            <CodePane
-              lang="js"
-              source={require("raw!../assets/codes/semicolon-insertion-1.example")}
-              margin="0 20px 0"
-              textSize="0.6em"
-            />
-            <Text textColor="primary">
-              都幾?
-            </Text>
-          </BgSlide>
-          <BgSlide transition={["slide"]}>
-            <CodePane
-              lang="js"
               source={require("raw!../assets/codes/semicolon-insertion-3.example")}
               margin="0 20px 0"
               textSize="0.6em"
@@ -190,32 +170,11 @@ export default class Presentation extends React.Component {
             </Text>
           </BgSlide>
           <BgSlide transition={["slide"]}>
-            <Text textColor="primary">
-              Javascript will automatically add semicolons during run-time,<br />
-              so the previous examples are not coding-style problem.
+            <Text textColor="primary" style={{lineHeight: '1.7em'}}>
+              Javascript 會在 run-time 幫你自動加分號<br />
+              前面的選擇並不是 coding style 的選擇<br />
+              兩種作法會帶來不同效果
             </Text>
-            <Appear>
-              <Heading size={1} textColor="white">
-                They are bugs!
-              </Heading>
-            </Appear>
-          </BgSlide>
-          <BgSlide transition={["slide"]}>
-            <CodePane
-              lang="js"
-              source={require("raw!../assets/codes/semicolon-insertion-bug-2.example")}
-              margin="0 20px 0"
-              textSize="0.6em"
-            />
-            <Text textColor="primary">
-              ...
-            </Text>
-            <CodePane
-              lang="js"
-              source={require("raw!../assets/codes/semicolon-insertion-bug-1.example")}
-              margin="0 20px 0"
-              textSize="0.6em"
-            />
           </BgSlide>
           <BgSlide transition={["slide"]}>
             <CodePane
@@ -237,15 +196,17 @@ export default class Presentation extends React.Component {
           <BgSlide transition={["slide"]}>
             <Image src={images.why.replace("/", "")} style={{ width: '80%' }} />
             <Appear>
-              <Text textColor="primary">
-                Because JS tries to add semicolon at the end of the line<br />
-                If nothing bad happend, the semicolon will remain there.
+              <Text textColor="primary" style={{ lineHeight: '1.7em' }}>
+                JS 會在 run-time 幫你加分號<br />
+                <a target="_blank" href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-automatic-semicolon-insertion">
+                  ES6 - semicolon insertion
+                </a>
               </Text>
             </Appear>
           </BgSlide>
           <BgSlide transition={["slide"]}>
             <Heading size={3} lineHeight={2} textColor="white">
-              Add semicolons manually!
+              自己加分號!
             </Heading>
           </BgSlide>
           <BgSlide transition={["slide"]}>
@@ -260,16 +221,12 @@ export default class Presentation extends React.Component {
             <List>
               <Appear>
                 <ListItem>
-                  <Text textColor="primary">
                     Dynamic: type checking during run-time
-                  </Text>
                 </ListItem>
               </Appear>
               <Appear>
                 <ListItem>
-                  <Text textColor="primary">
                     Weak: implicity type conversion
-                  </Text>
                 </ListItem>
               </Appear>
             </List>
@@ -302,11 +259,6 @@ export default class Presentation extends React.Component {
             <Image src={images.why.replace("/", "")} style={{ width: '80%' }} />
           </BgSlide>
           <BgSlide transition={["slide"]}>
-            <Heading textColor="primary">
-              Be carefull when transforming types
-            </Heading>
-          </BgSlide>
-          <BgSlide transition={["slide"]}>
             <Heading size={1} lineHeight={2} textColor="white">
               numbers
             </Heading>
@@ -337,7 +289,18 @@ export default class Presentation extends React.Component {
             />
           </BgSlide>
           <BgSlide transition={["slide"]}>
-            <Image src={images.ctlinSay.replace("/", "")} style={{ width: '80%' }} />
+            <Image src={images.ctlinSay.replace("/", "")} style={{ width: '100%' }} />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary" lineHeight={1.5}>
+              JS 這些設計是盡量讓服務上線後不要出問題
+            </Text>
+            <Text textColor="primary" lineHeight={1.5}>
+              也因此開發者要注重 coding style, 寫測試
+            </Text>
+            <Text textColor="primary" lineHeight={1.5}>
+              或善用一些工具，如 ESLint, FlowType
+            </Text>
           </BgSlide>
 
           {/*
@@ -481,9 +444,11 @@ export default class Presentation extends React.Component {
             />
           </BgSlide>
           <BgSlide transition={["slide"]}>
+            <Text textColor="primary" textSize="1em" lineHeight={1.5}>
+              'this' 指向誰，是一個容易混淆的事情
+            </Text>
             <Text textColor="primary" textSize="2em">
-              It's confused what 'this' actually points to. <br />
-              'this' points to <em>who call the function</em>.
+              'this' 指向 <em>執行的人</em>.
             </Text>
           </BgSlide>
           <BgSlide transition={["slide"]}>
@@ -504,7 +469,7 @@ export default class Presentation extends React.Component {
           </BgSlide>
           <BgSlide transition={["slide"]}>
             <Text textColor="primary" textSize="2em">
-              Use 'bind' to connect 'this' to the desire target (the original object, etc.)
+              使用 'bind' 來指向真正的執行者
             </Text>
             <CodePane
               lang="js"
@@ -521,14 +486,10 @@ export default class Presentation extends React.Component {
             </Heading>
             <List>
               <ListItem>
-                <Text textColor="primary">
                   Prototype Inheritance
-                </Text>
               </ListItem>
               <ListItem>
-                <Text textColor="primary">
                   strict mode
-                </Text>
               </ListItem>
             </List>
           </BgSlide>
@@ -545,19 +506,13 @@ export default class Presentation extends React.Component {
             </Heading>
             <List>
               <ListItem>
-                <Text textColor="primary">
                   Why ESLint?
-                </Text>
               </ListItem>
               <ListItem>
-                <Text textColor="primary">
                   What is ESLint?
-                </Text>
               </ListItem>
               <ListItem>
-                <Text textColor="primary">
                   How to use ESLint?
-                </Text>
               </ListItem>
             </List>
           </BgSlide>
@@ -588,19 +543,13 @@ export default class Presentation extends React.Component {
             </Text>
             <List>
               <ListItem>
-                <Text textColor="primary">
                   讀 code 的時間 90%，寫 code 的時間 10%
-                </Text>
               </ListItem>
               <ListItem>
-                <Text textColor="primary">
-                  Project 應該保持一致，方便多人協作
-                </Text>
+                  專案應該保持一致，方便多人協作
               </ListItem>
               <ListItem>
-                <Text textColor="primary">
                   善待你自己
-                </Text>
               </ListItem>
             </List>
           </BgSlide>
@@ -621,24 +570,23 @@ export default class Presentation extends React.Component {
             </Heading>
           </BgSlide>
           <BgSlide transition={["slide"]}>
+            <Text size={1} lineHeight={2} textColor="white">
+              Javascript 的<a href="https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis#Python" target="_blank">靜態程式碼檢查工具</a>
+            </Text>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
             <Heading size={2} lineHeight={2} textColor="white">
               History
             </Heading>
             <List>
               <ListItem>
-                <Text textColor="primary">
                   JSLint (cannot turn-off rules...)
-                </Text>
               </ListItem>
               <ListItem>
-                <Text textColor="primary">
                   JSHint (too few rules...)
-                </Text>
               </ListItem>
               <ListItem>
-                <Text textColor="primary">
                   ESLint -- custom coding style rule
-                </Text>
               </ListItem>
             </List>
           </BgSlide>
@@ -649,18 +597,7 @@ export default class Presentation extends React.Component {
           </BgSlide>
           <BgSlide transition={["slide"]}>
             <Heading size={5} lineHeight={2} textColor="white">
-              create project
-            </Heading>
-            <CodePane
-              lang="js"
-              source={require("raw!../assets/codes/npm-init.example")}
-              margin="0 20px 0"
-              textSize="0.6em"
-            />
-          </BgSlide>
-          <BgSlide transition={["slide"]}>
-            <Heading size={5} lineHeight={2} textColor="white">
-              install eslint
+              Install eslint
             </Heading>
             <CodePane
               lang="js"
@@ -671,7 +608,7 @@ export default class Presentation extends React.Component {
           </BgSlide>
           <BgSlide transition={["slide"]}>
             <Heading size={5} lineHeight={2} textColor="white">
-              install Airbnb coding style packages
+              Install Airbnb coding style packages
             </Heading>
             <CodePane
               lang="js"
@@ -682,7 +619,7 @@ export default class Presentation extends React.Component {
           </BgSlide>
           <BgSlide transition={["slide"]}>
             <Heading size={5} lineHeight={2} textColor="white">
-              add .eslintrc.js
+              Add .eslintrc.js
             </Heading>
             <CodePane
               lang="js"
@@ -693,16 +630,15 @@ export default class Presentation extends React.Component {
           </BgSlide>
           <BgSlide transition={["slide"]}>
             <Heading size={5} lineHeight={2} textColor="white">
-              write some code and lint it!
+              Add lint script.
             </Heading>
             <CodePane
               lang="js"
-              source={require("raw!../assets/codes/run-eslint.example")}
+              source={require("raw!../assets/codes/npm-lint.example")}
               margin="0 20px 0"
               textSize="0.6em"
             />
-          </BgSlide>
-          <BgSlide transition={["slide"]}>
+          </BgSlide><BgSlide transition={["slide"]}>
             <Heading size={5} lineHeight={2} textColor="white">
               write some code and lint it!
             </Heading>
