@@ -170,7 +170,7 @@ export default class Presentation extends React.Component {
             </Text>
           </BgSlide>
           <BgSlide transition={["slide"]}>
-            <Text textColor="primary" style={{lineHeight: '1.7em'}}>
+            <Text textColor="primary" style={{lineHeight: "1.7em"}}>
               Javascript 會在 run-time 幫你自動加分號<br />
               前面的選擇並不是 coding style 的選擇<br />
               兩種作法會帶來不同效果
@@ -194,9 +194,9 @@ export default class Presentation extends React.Component {
             />
           </BgSlide>
           <BgSlide transition={["slide"]}>
-            <Image src={images.why.replace("/", "")} style={{ width: '80%' }} />
+            <Image src={images.why.replace("/", "")} style={{ width: "80%" }} />
             <Appear>
-              <Text textColor="primary" style={{ lineHeight: '1.7em' }}>
+              <Text textColor="primary" style={{ lineHeight: "1.7em" }}>
                 JS 會在 run-time 幫你加分號<br />
                 <a target="_blank" href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-automatic-semicolon-insertion">
                   ES6 - semicolon insertion
@@ -256,7 +256,7 @@ export default class Presentation extends React.Component {
             />
           </BgSlide>
           <BgSlide transition={["slide"]}>
-            <Image src={images.why.replace("/", "")} style={{ width: '80%' }} />
+            <Image src={images.why.replace("/", "")} style={{ width: "80%" }} />
           </BgSlide>
           <BgSlide transition={["slide"]}>
             <Heading size={1} lineHeight={2} textColor="white">
@@ -289,7 +289,7 @@ export default class Presentation extends React.Component {
             />
           </BgSlide>
           <BgSlide transition={["slide"]}>
-            <Image src={images.ctlinSay.replace("/", "")} style={{ width: '100%' }} />
+            <Image src={images.ctlinSay.replace("/", "")} style={{ width: "100%" }} />
           </BgSlide>
           <BgSlide transition={["slide"]}>
             <Text textColor="primary" lineHeight={1.5}>
@@ -394,13 +394,13 @@ export default class Presentation extends React.Component {
             <Text textColor="primary" textSize="2em">
               Community
             </Text>
-            <Image src={images.npm2.replace("/", "")} style={{ width: '80%' }} />
+            <Image src={images.npm2.replace("/", "")} style={{ width: "80%" }} />
           </BgSlide>
           <BgSlide transition={["slide"]}>
             <Text textColor="primary" textSize="2em">
               Best of the Best: Cross Platform
             </Text>
-            <Image src={images.browsers.replace("/", "")} style={{ width: '80%' }} />
+            <Image src={images.browsers.replace("/", "")} style={{ width: "80%" }} />
           </BgSlide>
 
         {/*
