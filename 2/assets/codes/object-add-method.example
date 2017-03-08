@@ -1,0 +1,6 @@
+Person.prototype.getName = function() {
+  return this.name;
+};
+// now all object created by Person(...) have a method call getName
+
+person1.getName(); // Tim

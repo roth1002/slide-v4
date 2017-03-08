@@ -1,0 +1,8 @@
+var someCondition = False;
+
+// ...
+// 寫了 10 小時的 code
+// 就忘了要使用這個變數
+// ...
+
+

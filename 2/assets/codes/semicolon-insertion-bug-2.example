@@ -1,0 +1,4 @@
+if (true); // javascript add semicolon here, makes it a useless if
+{
+
+}

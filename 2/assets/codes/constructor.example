@@ -1,0 +1,7 @@
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+var person1 = new Person('Tim', 18);
+var person2 = new Person('Joe', 24);

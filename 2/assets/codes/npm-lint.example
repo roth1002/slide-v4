@@ -1,0 +1,8 @@
+// in package.json
+{
+  ...
+  "scripts": {
+    "lint": "eslint ." // add this
+  },
+  ...
+}

@@ -1,0 +1,6 @@
+// try-console.js
+/* eslint no-console: 0, no-else-return: 0  */
+
+console.log('try!!!!!');
+
+console.log('try!!!!!'); // eslint-disable-line no-console */

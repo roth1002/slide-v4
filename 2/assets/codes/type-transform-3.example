@@ -1,0 +1,12 @@
+typeof 1                    // "number"
+typeof true                 // "boolean"
+typeof "this is a string."  // "string"
+typeof {}                   // "object"
+typeof function() {}        // "function"
+typeof undefined            // "undefined"
+
+// typeof 很好用，像是判斷 string、boolean、undefined、function
+// 但有些時候...
+typeof null // "object"
+typeof []   // "object"
+typeof NaN  // "number"

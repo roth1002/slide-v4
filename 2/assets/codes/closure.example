@@ -1,0 +1,16 @@
+function makeList() {
+  var list = []; // free variables in closure
+  return {
+    getState: function() {
+      return list;
+    },
+    append: function(item) {
+      list.push(item);
+    }
+  };
+}
+
+var list = makeList();
+list.append(1);
+list.append(2);
+list.getState(); // [1, 2]
