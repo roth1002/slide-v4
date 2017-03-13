@@ -1,0 +1,6 @@
+POST /users/123 HTTP/1.1 // Request-line
+Host: www.example.com // header fields
+Accept-Language: en-us // ..
+Connection: Keep-Alive // ..
+// empty line
+licenseID=string&content=string&/paramsXML=string // message-body

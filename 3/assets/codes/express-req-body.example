@@ -1,0 +1,12 @@
+$ npm install --save body-parser // 必須安裝 body-parser
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.post('/', function(req, res) {
+  res.send(JSON.stringify(req.body));
+});

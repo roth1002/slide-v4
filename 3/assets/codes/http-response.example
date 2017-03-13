@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK // Status-line
+Accept-Ranges: bytes
+Cache-Control: public, max-age=0
+Connection: keep-alive
+Content-Length: 53
+Content-Type: text/html; charset=UTF-8
+Date: Tue, 11 Oct 2016 16:32:33 GMT
+ETag: "53-1476203499000"
+Last-Modified: Tue, 11 Oct 2016 16:31:39 GMT
+// empty line
+<html> // message-body
+<body>
+<h1>Hello, World!</h1>
+</body>
+</html>

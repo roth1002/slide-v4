@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "NODE_ENV=production npm run clean && babel src -d lib --ignore __tests__ --copy-files",
+    "clean": "rimraf lib",
+    "lint": "eslint src scripts",
+    "start": "NODE_ENV=development nodemon src/index.js --exec babel-node",
+    "test": "npm run lint && npm run testonly",
+    "testonly": "NODE_ENV=test jest",
+    "testonly:watch": "npm run testonly -- --watch",
+  },
+  //...
+}

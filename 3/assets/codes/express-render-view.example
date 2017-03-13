@@ -1,0 +1,17 @@
+$ npm i --save nunjucks
+
+<h1>{{title}}</h1> // views/index.nunjucks
+// ============================================
+const app = express();
+const nunjucks = require('nunjucks');
+
+app.set('views', path.join(__dirname, 'views')); // view engine setup
+app.set('view engine', 'nunjucks');
+nunjucks.configure('views', {
+  autoescape: true,
+  express: app
+});
+
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});

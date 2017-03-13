@@ -1,0 +1,4 @@
+// 只有 path 前綴有 /api 才會經過這個 middleware
+app.use('/api', function(req, res, next) {
+  next(); // 一定要 call next 除非你不希望往下執行
+});

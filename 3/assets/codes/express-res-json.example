@@ -1,0 +1,14 @@
+const express = require('express');
+const app = express();
+
+app.use('/', function (req, res) {
+  const user = {
+    name: 'cph',
+    age: 23,
+  };
+  res.json(user);
+});
+
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!');
+});
