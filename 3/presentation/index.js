@@ -546,7 +546,7 @@ export default class Presentation extends React.Component {
             />
           </BgSlide>
           <BgSlide transition={['slide']}>
-            <Heading size={4} lineHeight={2} textColor="white">
+            <Heading size={4} lineHeight={1} textColor="white">
               Render view
             </Heading>
             <CodePane

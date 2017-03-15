@@ -1,7 +1,10 @@
+// install package
 $ npm i --save nunjucks
 
-<h1>{{title}}</h1> // views/index.nunjucks
-// ============================================
+// views/index.nunjucks
+<h1>{{title}}</h1>
+
+// server.js
 const app = express();
 const nunjucks = require('nunjucks');
 
