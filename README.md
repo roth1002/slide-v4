@@ -43,7 +43,7 @@
 - JSX
 - React Basic(create-react-app)
 
-## W5: Webpack (4/12 CPH)
+## W5: Webpack (4/5 CPH)
 - CommonJS on client
 - Webpack Basic
 - Loaders
@@ -52,24 +52,24 @@
 
 ## HW1: TODOs（純前端）
 - Assign Day: 3/15
-- Due Day: 4/19
+- Due Day: 4/12
 
-## W6: React 課堂實作 (Calculator using React.js) (4/19 all)
+## W6: React 課堂實作 (Calculator using React.js) (4/12 all)
 
 
-## W7: Advanced Front-end (4/26 CPH)
+## W7: Advanced Front-end (4/19 CPH)
 - More on React
 - Lifecycle hook
 - with css, styles together (inline-style, className)
 - React Router
 - 提醒 HW2
 
-## W8: API (5/3 kpman)
+## W8: API (4/26 kpman)
 - Promise
 - Fetch
 - API Design
 
-## W9: Testing (5/10 chentsulin)
+## W9: Testing (5/3 chentsulin)
 - TDD
 - Coverage
 - CI
@@ -78,32 +78,32 @@
 - 專案管理 (SEMVER, alpha, beta, rc)
 
 ## HW2: 留言版（有 backend）
-- Assign Day: 4/26
-- Due Day: 5/17
+- Assign Day: 4/19
+- Due Day: 5/3
 
-## W10: In-class Hackathon (5/17 all)
+## W10: In-class Hackathon (5/10 all)
 Individual，題目自訂，須依照一些前面教過的基本架構
 
-## W11: Redux (5/24 CPH)
+## W11: Redux (5/17 CPH)
 - Action
 - Store
 - Reducer
 - Middleware
 - react-redux
 
-## W12: Database (5/31 Calvin)
+## W12: Database (5/24 Calvin)
 - ACID
 - CAP
 - RDBMS
 - SQL
 - 提醒 HW3
 
-## W13: Backend framework (6/7 kpman)
+## W13: Backend framework (5/31 kpman)
 - Express Blog
 - Routing (RESTful)
 - MVC
 
-## W14: Other Backend Good stuff (6/14 chentsulin)
+## W14: Other Backend Good stuff (6/7 chentsulin)
 - Generator
 - Migration
 - Model
