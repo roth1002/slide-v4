@@ -1,0 +1,12 @@
+var { name, age } = person1;
+
+// Same as
+var name = person1.name;
+var age = person1.age;
+
+var [x, y] = [900, 600];
+
+// Same as
+var arr = [900, 600];
+var x = arr[0];
+var y = arr[1];

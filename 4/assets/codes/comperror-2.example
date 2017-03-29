@@ -1,0 +1,8 @@
+// use undefined A to createElement
+class Hello extends React.Component {
+  render() {
+    return (
+      <A>Hello World</A>
+    );
+  }
+}

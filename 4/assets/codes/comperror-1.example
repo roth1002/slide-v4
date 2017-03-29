@@ -1,0 +1,10 @@
+class Hello extends React.Component {
+  render() {
+    // 不能回傳三個並列的
+    return (
+      <div>Hello World</div>
+      <div>Hello World</div>
+      <div>Hello World</div>
+    );
+  }
+}

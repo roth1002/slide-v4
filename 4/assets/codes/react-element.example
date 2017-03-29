@@ -1,0 +1,13 @@
+// 用小寫來表示 html element，像是：
+
+<div className="foo" />
+
+// 或是
+
+<div></div>
+
+// 用大寫來表示 React Component：
+
+<Hello text="word" />
+
+// 跟 XML 一樣 tag 一定要 close (/)

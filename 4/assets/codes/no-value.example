@@ -1,0 +1,6 @@
+// 沒有 value 就會是 Uncontrolled Component
+// 跟一般一樣
+// 但沒有辦法用 react 去控制 value
+render() {
+  return <input type="text" />;
+}

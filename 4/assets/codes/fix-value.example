@@ -1,0 +1,5 @@
+// Controlled Component
+// 指定了值，那就無法改變它
+render() {
+  return <input type="text" value="Hello!" />;
+}
