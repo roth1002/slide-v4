@@ -3,4 +3,4 @@ function f(x, y, z) {
 }
 
 // Pass each elem of array as argument
-f(...[1,2,3]) // 6
+f(...[1, 2, 3]) // 6

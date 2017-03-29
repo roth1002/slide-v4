@@ -1,0 +1,16 @@
+import React, { Component } from 'react';
+
+import * as actions from './actions';
+
+
+export default function fn() {
+
+}
+
+const a = 1;
+const b = 2;
+
+export {
+  a,
+  b,
+}

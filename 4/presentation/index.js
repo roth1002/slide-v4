@@ -79,26 +79,10 @@ export default class Presentation extends React.Component {
               Outline
             </Heading>
             <List>
-              <ListItem>
-                <Text textColor="primary">
-                  ES6 (ES2015)
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  Babel
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  JSX
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  React
-                </Text>
-              </ListItem>
+              <ListItem>ES6 (ES2015)</ListItem>
+              <ListItem>Babel</ListItem>
+              <ListItem>JSX</ListItem>
+              <ListItem>React</ListItem>
             </List>
           </BgSlide>
           <BgSlide transition={['slide']}>
@@ -209,6 +193,18 @@ export default class Presentation extends React.Component {
           </BgSlide>
 
           <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={1} textColor="white">
+              Import, Export
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/import-export.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+
+          <BgSlide transition={['slide']}>
             <Heading size={6} lineHeight={1} textColor="white">
               要用舊的語法做出相同的功能可以參考
             </Heading>
@@ -273,7 +269,7 @@ export default class Presentation extends React.Component {
 
           <BgSlide transition={['slide']}>
             <Heading size={3} lineHeight={2} textColor="white">
-              瀏覽器支援度
+              瀏覽器不一定支援
             </Heading>
           </BgSlide>
 
@@ -283,7 +279,7 @@ export default class Presentation extends React.Component {
               <Link
                 href="http://caniuse.com/"
                 target="_blank"
-              >caniuse</Link>
+              > caniuse</Link>
             </Heading>
             <Image src={images.caniuse.replace('/', '')} style={{ width: '90%' }} />
           </BgSlide>
@@ -294,7 +290,7 @@ export default class Presentation extends React.Component {
               <Link
                 href="https://kangax.github.io/compat-table/es6/"
                 target="_blank"
-              >版本相容性 table</Link>
+              > 版本相容性 table</Link>
             </Heading>
             <Image src={images.comptable.replace('/', '')} style={{ width: '90%' }} />
           </BgSlide>
@@ -316,21 +312,9 @@ export default class Presentation extends React.Component {
               在網路上傳輸：size 很重要
             </Heading>
             <List>
-              <ListItem>
-                <Text textColor="primary">
-                  Gzip：可壓縮至原本 30%
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  Uglify：可壓縮至原本 50%
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  壓縮後通常會命名為 `.min.js`，例如：`https://fb.me/react-0.13.3.min.js`
-                </Text>
-              </ListItem>
+              <ListItem>Gzip：可壓縮至原本 30%</ListItem>
+              <ListItem>Uglify：可壓縮至原本 50%</ListItem>
+              <ListItem>壓縮後通常會命名為 .min.js，例如：https://fb.me/react-0.13.3.min.js</ListItem>
             </List>
           </BgSlide>
 
@@ -343,16 +327,8 @@ export default class Presentation extends React.Component {
               在 HTTP2 普及之前
             </Text>
             <List>
-              <ListItem>
-                <Text textColor="primary">
-                  把檔案串接 (concat) 成一個大檔
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  用多個網域來放 static resource
-                </Text>
-              </ListItem>
+              <ListItem>把檔案串接 (concat) 成一個大檔</ListItem>
+              <ListItem>用多個網域來放 static resource</ListItem>
             </List>
           </BgSlide>
 
@@ -390,21 +366,9 @@ export default class Presentation extends React.Component {
               簡單的 setup 步驟
             </Heading>
             <List>
-              <ListItem>
-                <Text textColor="primary">
-                  安裝 babel-cli, babel-preset-react, babel-preset-latest, babel-plugin-transform-object-rest-spread
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  寫 .babelrc，列出 presets 和 plugins
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  寫對應的 compile npm scripts
-                </Text>
-              </ListItem>
+              <ListItem>安裝 babel-cli, babel-preset-react, babel-preset-env, babel-plugin-transform-object-rest-spread</ListItem>
+              <ListItem>寫 .babelrc，列出 presets 和 plugins</ListItem>
+              <ListItem>寫對應的 compile npm scripts</ListItem>
             </List>
           </BgSlide>
 
@@ -427,12 +391,37 @@ export default class Presentation extends React.Component {
 
           <BgSlide transition={['slide']}>
             <Heading size={3} lineHeight={2} textColor="white">
+              Create React App
+            </Heading>
+            <Text textColor="white">NPM</Text>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/nicra.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+            <Text textColor="white">Yarn</Text>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/yacra.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+            <Text textColor="white">Init Project</Text>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/cra.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+
+          <BgSlide transition={['slide']}>
+            <Heading size={3} lineHeight={2} textColor="white">
               應用程式狀態
             </Heading>
-            <Text textColor="primary">
-              應用程式的狀態存在於各個程式片斷中
-            </Text>
-            <Text textColor="primary">
+            <Text textColor="primary" lineHeight={2}>
+              應用程式的狀態存在於各個程式片斷中<br />
               而且可能有許多複本存在不同變數中需要同步
             </Text>
           </BgSlide>
@@ -585,7 +574,7 @@ export default class Presentation extends React.Component {
           </BgSlide>
           <BgSlide transition={['slide']}>
             <Heading size={5} lineHeight={1} textColor="white">
-              包進一個共同根 element 是比較普遍的做法
+              包進一個共同根 element (v16 之前)
             </Heading>
             <CodePane
               lang="js"
@@ -648,7 +637,7 @@ export default class Presentation extends React.Component {
 
           <BgSlide transition={['slide']}>
             <Heading size={6} lineHeight={2} textColor="white">
-              可以設定 prop 型別檢查，詳細的 propTypes 可以看
+              prop 型別檢查，詳細的 propTypes 可以看
               <Link
                 href="https://facebook.github.io/react/docs/reusable-components.html#prop-validation"
                 target="_blank"
@@ -704,7 +693,7 @@ export default class Presentation extends React.Component {
             </Heading>
           </BgSlide>
 
-           <BgSlide transition={['slide']}>
+          <BgSlide transition={['slide']}>
             <CodePane
               lang="js"
               source={require("raw!../assets/codes/state.example")}
@@ -725,21 +714,9 @@ export default class Presentation extends React.Component {
               它們相似的地方
             </Heading>
             <List>
-              <ListItem>
-                <Text textColor="primary">
-                  都是一般 JavaScript 物件
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  都會觸發 UI 更新
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  對 UI 有決定性影響
-                </Text>
-              </ListItem>
+              <ListItem>都是一般 JavaScript 物件</ListItem>
+              <ListItem>都會觸發 UI 更新</ListItem>
+              <ListItem>對 UI 有決定性影響</ListItem>
             </List>
           </BgSlide>
 
@@ -761,26 +738,10 @@ export default class Presentation extends React.Component {
               React 使用 SyntheticEvent
             </Heading>
             <List>
-              <ListItem>
-                <Text textColor="primary">
-                  在 nativeEvent 上封裝來達成跨平台
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  用 Event Delegation
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  用 Event pool
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  都是使用 camelCase
-                </Text>
-              </ListItem>
+              <ListItem>在 nativeEvent 上封裝來達成跨平台</ListItem>
+              <ListItem>用 Event Delegation</ListItem>
+              <ListItem>用 Event pool</ListItem>
+              <ListItem>都是使用 camelCase</ListItem>
             </List>
           </BgSlide>
 
@@ -864,39 +825,19 @@ export default class Presentation extends React.Component {
 
           <BgSlide transition={['slide']}>
             <List>
-              <ListItem>
-                <Text textColor="primary">
-                  Step 1: break the UI into a component hierarchy
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  Step 2: Build a static version in React
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  Step 3: Identify the minimal (but complete) representation of UI state
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  Step 4: Identify where your state should live
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  Step 5: Add inverse data flow
-                </Text>
-              </ListItem>
+              <ListItem>Step 1: break the UI into a component hierarchy</ListItem>
+              <ListItem>Step 2: Build a static version in React</ListItem>
+              <ListItem>Step 3: Identify the minimal (but complete) representation of UI state</ListItem>
+              <ListItem>Step 4: Identify where your state should live</ListItem>
+              <ListItem>Step 5: Add inverse data flow</ListItem>
             </List>
           </BgSlide>
 
           <BgSlide transition={['slide']}>
-            <Heading size={5} lineHeight={2} textColor="white">
+            <Heading size={4} lineHeight={2} textColor="white">
               事情發生的順序大多不重要
             </Heading>
-            <Text textColor="primary">
+            <Text textColor="primary" lineHeight={2}>
               事件發生 (onClick..) 會去改變資料<br />
               資料決定 UI 長什麼樣跟事件本身無關
             </Text>
