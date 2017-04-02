@@ -1,0 +1,7 @@
+# Installation
+# since we don't use babel directly,
+# we install babel-core instead of babel-cli
+npm install --save-dev babel-loader babel-core
+
+# some presets
+npm install --save-dev babel-preset-latest babel-preset-react

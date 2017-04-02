@@ -1,0 +1,3 @@
+// now we can import css styles
+import './myCss.css';
+require('./myCss2.css');

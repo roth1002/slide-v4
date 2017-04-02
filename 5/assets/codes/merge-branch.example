@@ -1,0 +1,8 @@
+# first, check difference
+git diff branch-1 branch-2
+
+# move to base branch
+git checkout branch-1
+
+# merge
+git merge branch-2

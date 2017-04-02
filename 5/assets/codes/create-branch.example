@@ -1,0 +1,4 @@
+# either way is OK
+
+git checkout -b new-branch
+git branch new-branch

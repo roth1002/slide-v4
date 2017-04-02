@@ -1,0 +1,2 @@
+# install both of them
+npm install --save-dev style-loader css-loader

@@ -1,0 +1,6 @@
+// webpack.config.js
+module.exports = {
+  ...
+  module: {
+    devtool: 'eval', // Debug enhancement
+};

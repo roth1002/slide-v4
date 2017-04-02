@@ -1,0 +1,4 @@
+// terminal
+webpack --watch ./entry bundle.js
+
+// --watch 會監控檔案改變進行編譯

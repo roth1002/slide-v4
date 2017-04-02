@@ -1,0 +1,2 @@
+npm install --save-dev webpack   # use webpack locally
+npm install -g webpack           # use webpach globally

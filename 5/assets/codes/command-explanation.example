@@ -1,0 +1,6 @@
+// terminal
+webpack ./src/index.js ./dist/bundle.js
+
+// webpack [entry-path] [output-path]
+// ./src/index.js:   module entry point
+// ./dist/bundle.js: output bundle file

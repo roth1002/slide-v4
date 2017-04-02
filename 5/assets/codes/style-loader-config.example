@@ -1,0 +1,16 @@
+// webpack.config.js
+module.exports = {
+  ...
+  module: {
+    rules: [{
+      ... // other loaders
+    , {
+      test: /\.css$/,  // target: css files
+      use: [
+        'style-loader',  // add <style> tag
+        'css-loader'     // preprocess 'url()'
+      ], // 執行順序由下到上
+      exclude: /node_modules/   // 不要處理 3rd party 的 code
+    }]
+  }
+};

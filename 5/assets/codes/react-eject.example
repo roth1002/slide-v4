@@ -1,0 +1,5 @@
+# 注意!!!此動作不可逆
+npm run eject
+
+# or
+yarn eject

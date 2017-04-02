@@ -1,0 +1,6 @@
+// index.js
+var add = require('./add');
+console.log('9876 + 1546 = ', add(9876, 1546));
+
+// add.js
+module.exports = function(a, b) { return a + b; }

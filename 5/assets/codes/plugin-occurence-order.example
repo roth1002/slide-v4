@@ -1,0 +1,7 @@
+// webpack.config.js
+
+module.exports = {
+  plugins: [
+    new webpack.optimize.OccurrenceOrderPlugin(),
+  ],
+})
