@@ -1,0 +1,10 @@
+// webpack.config.js
+
+module.exports = {
+  plugins: [
+    new webpack.DefinePlugin({
+      PRODUCTION: true,
+      // all 'PRODUCTION' is replaced with 'true'
+    })
+  ],
+})
