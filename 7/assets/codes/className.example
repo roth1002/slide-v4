@@ -1,0 +1,11 @@
+// style.css
+.mydiv {
+  color: rgb(0, 0, 255),
+}
+
+// MyDiv.js
+import 'style.css';
+
+function MyDivComponent() {
+  return <div className="mydiv">Hello World!</div>;
+}

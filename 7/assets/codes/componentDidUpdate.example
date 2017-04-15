@@ -1,0 +1,7 @@
+componentDidUpdate(prevProps, prevState) {
+  // invoked after re-rendering
+
+  // Within this method,
+  // we usually perform DOM operation
+  // based on comparisons of current and previous state/props.
+}

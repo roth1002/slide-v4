@@ -1,0 +1,18 @@
+// Title.js
+import React from 'react';
+import styled from 'styled-components';
+
+export default Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: rgba(100, 100, 256, 0.5);
+  background: ${props => props.highlight ? 'yellow' : 'white'};
+`;
+
+// App.js
+import Title from './Title'
+
+...
+render() {
+  return <Title highlight>Hello World</Title>
+}

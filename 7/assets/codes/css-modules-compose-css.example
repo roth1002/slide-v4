@@ -1,0 +1,14 @@
+// xxx.css
+.title {
+  color: rgba(200, 100, 0, 0.9)
+}
+
+.hello {
+  background-color: rgba(0, 100, 200, 0.3)
+}
+
+// yyy.css
+.title {
+  composes: title hello from './xxx.css';
+  font-size: 2em;
+}
