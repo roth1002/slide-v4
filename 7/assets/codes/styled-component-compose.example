@@ -1,0 +1,9 @@
+// AnotherTitle.js
+import React from 'react';
+import styled from 'styled-components';
+
+import Title from './Title'
+
+const AnotherTitle = styled(Title)`
+  border-color: rgba(20, 10, 10, 0.9);
+`

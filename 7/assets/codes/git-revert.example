@@ -1,0 +1,7 @@
+git revert <commit>
+
+# revert the last one
+git revert HEAD
+
+# revert the the 2nd to last commit
+git revert HEAD~2

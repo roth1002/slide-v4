@@ -1,0 +1,5 @@
+// use npm
+npm install styled-components
+
+// or, use yarn
+yarn add styled-components

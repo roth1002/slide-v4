@@ -1,0 +1,5 @@
+# from master branch
+git checkout feature-branch
+
+# make it originate from master
+git rebase master

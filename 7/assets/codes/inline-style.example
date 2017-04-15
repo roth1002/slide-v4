@@ -1,0 +1,13 @@
+// MyDiv.js
+const divStyle = {
+  color: 'blue',
+  backgroundImage: 'url(' + imgUrl + ')', // camelCase !
+
+  // support browsers
+  WebkitTransition: 'all', // note the capital 'W' here
+  msTransition: 'all' // 'ms' is the only lowercase vendor prefix
+};
+
+function MyDivComponent() {
+  return <div style={divStyle}>Hello World!</div>;
+}

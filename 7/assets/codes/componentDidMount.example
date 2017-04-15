@@ -1,0 +1,8 @@
+componentDidMount() {
+  // invoked only once
+
+  // can access children by refs
+
+  // Within this method,
+  // we usually call api, register method on 'docment', etc.
+}

@@ -1,0 +1,6 @@
+componentWillUnmount() {
+  // invoked only once
+
+  // perform any necessary clean-ups
+  // usually deleting the methods registered in componentWillMount
+}

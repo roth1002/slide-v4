@@ -1,0 +1,5 @@
+# Alter some commits before rebasing in interactive mode
+git rebase -i master
+
+# "rebase" can be used to modify on current branch
+git rebase -i HEAD~{n}

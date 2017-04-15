@@ -1,0 +1,13 @@
+# undo the last n commits
+git reset HEAD~{n}
+
+# soft mode: only commit history is removed
+git reset --soft HEAD~{n}
+
+# mixed mode: commit history and staging removed
+git reset --mixed HEAD~{n}
+
+# hard mode: (CAUTION) commit history, staging and working directory removed
+git reset --hard HEAD~{n}
+
+# https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting#commit-level-operations

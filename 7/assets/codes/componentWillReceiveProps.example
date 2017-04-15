@@ -1,0 +1,8 @@
+componentWillReceiveProps(nextProps) {
+  // invoked when new props are passed in
+
+  // can use setState()
+
+  // Within this method,
+  // we usually update state with the new props
+}

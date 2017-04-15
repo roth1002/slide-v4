@@ -1,0 +1,11 @@
+//App.css
+.title {
+  color: rgba(200, 100, 0, 0.5);
+}
+
+// App.js
+import style from './App.css';
+
+const App = () => (
+  <div classNames={style.title}>Hello World!</div>
+)

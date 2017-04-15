@@ -1,0 +1,11 @@
+shouldComponentUpdate(nextProps, nextState) {
+  // invoked when new props or state are passed in
+
+  // cannot use setState()
+
+  // Within this method,
+  // we compare new props and state with the old ones,
+  // We usually perform performance tuning here.
+
+  return nextProps.id !== this.props.id; // return bool, if true, re-render
+}
