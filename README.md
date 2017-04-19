@@ -48,6 +48,7 @@
 - Webpack Basic
 - Loaders
 - Git collaboration (branch, checkout)
+- GithubFlow
 - Github pages
 
 ## HW1: TODOs（純前端）
@@ -61,7 +62,7 @@
 - More on React
 - Lifecycle hook
 - with css, styles together (inline-style, className)
-- React Router
+- Git (cherrypick, rebase -i, tag)
 
 ## W8: API (4/26 kpman)
 - Promise
@@ -73,9 +74,9 @@
 - TDD
 - Coverage
 - CI
-- Git (cherrypick, rebase -i, tag)
 - GitFlow, GithubFlow
 - 專案管理 (SEMVER, alpha, beta, rc)
+- React Router
 
 ## W10: In-class Hackathon (5/10 all)
 Individual，題目自訂，須依照一些前面教過的基本架構
