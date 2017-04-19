@@ -62,12 +62,12 @@
 - Lifecycle hook
 - with css, styles together (inline-style, className)
 - React Router
-- 提醒 HW2
 
 ## W8: API (4/26 kpman)
 - Promise
 - Fetch
 - API Design
+- 提醒 HW2
 
 ## W9: Testing (5/3 chentsulin)
 - TDD
@@ -77,12 +77,12 @@
 - GitFlow, GithubFlow
 - 專案管理 (SEMVER, alpha, beta, rc)
 
-## HW2: 留言版（有 backend）
-- Assign Day: 4/19
-- Due Day: 5/3
-
 ## W10: In-class Hackathon (5/10 all)
 Individual，題目自訂，須依照一些前面教過的基本架構
+
+## HW2: 留言版（有 backend）
+- Assign Day: 4/26
+- Due Day: 5/10
 
 ## W11: Redux (5/17 CPH)
 - Action
