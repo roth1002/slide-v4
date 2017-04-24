@@ -1,0 +1,8 @@
+function isUserTooYoung(id) {
+  return openDatabase(db)
+    .then(getCollection)
+    .then(find.bind(null, {'id': id}))
+    .then(function(user) {
+        return user.age < cutoffAge;
+    });
+}

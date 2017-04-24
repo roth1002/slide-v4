@@ -1,0 +1,7 @@
+一致的規則
+
+取得資源清單 -> GET  /resources
+新增資源    -> POST /resources
+取得單一資源 -> GET  /resources/:id
+修改單一資源 -> PUT  /resources/:id
+刪除單一資源 -> DELETE /resources/:id

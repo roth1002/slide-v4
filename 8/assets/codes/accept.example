@@ -1,0 +1,5 @@
+用 Accept 跟 Server 溝通格式
+
+接收 純文字 -> Accept: text/plain
+接收 HTML  -> Accept: text/html
+接收 JSON  -> Accept: application/json

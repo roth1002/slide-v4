@@ -1,0 +1,11 @@
+// 等一起完成
+const p1 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 500, "one");
+});
+const p2 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 100, "two");
+});
+
+Promise.all([p1, p2]).then((value) => {
+  console.log(value); // Array [ "one", "two" ]
+});

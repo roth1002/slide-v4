@@ -1,0 +1,11 @@
+function isUserTooYoung(id, callback) {
+  openDatabase(function(db) {
+    getCollection(db, 'users', function(col) {
+      find(col, {'id': id},function(result) {
+        result.filter(function(user) {
+          callback(user.age < cutoffAge)
+        })
+      })
+    })
+  })
+}
