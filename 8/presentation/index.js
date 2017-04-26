@@ -40,6 +40,10 @@ const images = {
   promise: require('../assets/promise.png'), // eslint-disable-line global-require
   jsonTrend: require('../assets/jsonTrend.png'), // eslint-disable-line global-require
   fetch: require('../assets/fetch.png'), // eslint-disable-line global-require
+  rootComponent: require('../assets/root-component.png'), // eslint-disable-line global-require
+  containerComponent: require('../assets/container-components.png'), // eslint-disable-line global-require
+  reduxAsyncActions: require('../assets/redux-async-actions.png'), // eslint-disable-line global-require
+  relay: require('../assets/relay.png'), // eslint-disable-line global-require
 };
 
 preloader(images);
@@ -73,7 +77,7 @@ export default class Presentation extends React.Component {
               Web Programming Seminar
             </Heading>
             <Heading size={5} fix textColor="white">
-              Week 7
+              Week 8
             </Heading>
             <Text
               textSize="1.5em"
@@ -101,6 +105,137 @@ export default class Presentation extends React.Component {
               </ListItem>
               <ListItem>
                 fetch
+              </ListItem>
+            </List>
+          </BgSlide>
+          {/* =================================
+            Outline
+          ================================= */}
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Before we start
+            </Heading>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              <Link
+                href="http://andrewhfarmer.com/react-ajax-best-practices/"
+                target="_blank"
+              >
+                React AJAX Best Practices
+              </Link>
+            </Heading>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Root Component
+            </Heading>
+            <Image
+              src={images.rootComponent.replace('/', '')}
+              style={{ height: '50%' }}
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Root Component
+            </Heading>
+            <List>
+              <ListItem>
+                由 Root Component 一次把資料拿回來
+              </ListItem>
+              <ListItem>
+                利用 Props 將相關資料傳遞下去 render
+              </ListItem>
+              <ListItem>
+                適合資料量不大的 prototype project
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              <Link
+                href="https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0"
+                target="_blank"
+              >
+                Container Components
+              </Link>
+            </Heading>
+            <Image
+              src={images.containerComponent.replace('/', '')}
+              style={{ height: '60%' }}
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              <Link
+                href="https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0"
+                target="_blank"
+              >
+                Container Components
+              </Link>
+            </Heading>
+            <List>
+              <ListItem>
+                利用 Container Component 去抓資料
+              </ListItem>
+              <ListItem>
+                將資料傳給 Presentational Component 做 render
+              </ListItem>
+              <ListItem>
+                Component Tree 大到一定規模後是用
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Redux Async Actions
+            </Heading>
+            <Image
+              src={images.reduxAsyncActions.replace('/', '')}
+              style={{ height: '50%' }}
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Redux Async Actions
+            </Heading>
+            <List>
+              <ListItem>
+                利用 Redux 統一管理
+              </ListItem>
+              <ListItem>
+                將資料利用 Props 傳給  Component 做 render
+              </ListItem>
+              <ListItem>
+                中型以上專案適用
+              </ListItem>
+              <ListItem>
+                Redux flow 後面課堂會教
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Relay
+            </Heading>
+            <Image
+              src={images.relay.replace('/', '')}
+              style={{ height: '60%' }}
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Relay
+            </Heading>
+            <List>
+              <ListItem>
+                需學習 Relay 和 GraphQL
+              </ListItem>
+              <ListItem>
+                需實作 GraphQL server endpoint
+              </ListItem>
+              <ListItem>
+                大型規模專案試用
               </ListItem>
             </List>
           </BgSlide>
@@ -728,24 +863,16 @@ export default class Presentation extends React.Component {
             </Heading>
             <List>
               <ListItem>
-
                 在 IE7 (2006) 年就有的 API
-
               </ListItem>
               <ListItem>
-
                 命名有些問題
-
               </ListItem>
               <ListItem>
-
                 API 太過低階
-
               </ListItem>
               <ListItem>
-
                 不打算教這個
-
               </ListItem>
             </List>
           </BgSlide>
@@ -756,7 +883,6 @@ export default class Presentation extends React.Component {
             可以 run 在 browser、node、react native (ios, android)
             <List>
               <ListItem>
-
                 <Link
                   href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch"
                   target="_blank"
@@ -768,16 +894,12 @@ export default class Presentation extends React.Component {
 
               </ListItem>
               <ListItem>
-
                 <Link
                   href="https://github.com/mzabriskie/axios"
                   target="_blank"
                 >
                   axios
                 </Link>
-                {' '}
-                (會教這個)
-
               </ListItem>
               <ListItem>
 
@@ -931,7 +1053,7 @@ export default class Presentation extends React.Component {
               {' '}
               物件用法
             </Heading>
-            response.text() response.json() 都是回傳 promise
+            常用的 response.text() response.json() 都是回傳 promise
             <CodePane
               lang="js"
               source={require('raw!../assets/codes/fetch-response.example')}
@@ -977,19 +1099,13 @@ export default class Presentation extends React.Component {
             </Heading>
             <List>
               <ListItem>
-
-                method: 可以是 get(default), post, put, delete
-
+                method: 可以是 get, post, put, delete
               </ListItem>
               <ListItem>
-
                 headers: HTTP request header
-
               </ListItem>
               <ListItem>
-
                 body: JSON.stringify 轉成 JSON 字串
-
               </ListItem>
             </List>
           </BgSlide>
@@ -1004,14 +1120,10 @@ export default class Presentation extends React.Component {
             </Heading>
             <List>
               <ListItem>
-
                 status 4xx, 5xx 不會被 reject (jQuery.ajax() 會 fail)
-
               </ListItem>
               <ListItem>
-
                 預設不會傳 cookie 到 server
-
               </ListItem>
             </List>
           </BgSlide>
@@ -1022,6 +1134,78 @@ export default class Presentation extends React.Component {
             <CodePane
               lang="js"
               source={require('raw!../assets/codes/fetch-check-status.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              <Link href="https://developer.mozilla.org/en-US/docs/Web/API/Response/ok">
+                Response.ok
+              </Link>
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/response-ok.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          {/* =================================
+            axios
+            ================================= */}
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              axios
+            </Heading>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              axios
+            </Heading>
+            <List>
+              <ListItem>
+                Promise based HTTP client for the browser and node.js
+              </ListItem>
+              <ListItem>
+                GitHub 上面超過 18,000 star 數
+              </ListItem>
+              <ListItem>
+                每月超過百萬下載
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              <Link href="https://github.com/mzabriskie/axios#example">
+                axios GET
+              </Link>
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/axios-get.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              axios GET 也可利用 option 傳遞參數
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/axios-get2.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              axios POST
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/axios-post.example')}
               margin="0 20px 0"
               textSize="0.6em"
             />
