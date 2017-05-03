@@ -1,0 +1,17 @@
+describe('assertions', () => {
+  it('should be true', () => {
+    const flag = true;
+    expect(flag).toBe(true);
+  });
+
+  it('should equal', () => {
+    const person = { name: 'Amy'};
+    expect(person).toEqual({ name: 'Amy' });
+  });
+
+  it('should throw', () => {
+    expect(
+      () => { throw new Error('爆了') }
+    ).toThrow();
+  });
+});

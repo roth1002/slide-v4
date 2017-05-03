@@ -1,0 +1,6 @@
+location.hash = '/#/1';
+location.replace('/#/2');
+
+history.back();
+history.back();
+history.go(2);

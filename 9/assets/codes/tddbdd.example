@@ -1,0 +1,7 @@
+// TDD
+assertEqual(runner.name, 'Mocha');
+assert(console.log.mocks.calls.length > 0)
+
+// BDD
+expect(runner.name).toBe('Mocha');
+expect(console.log).toBeCalled();

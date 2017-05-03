@@ -1,0 +1,14 @@
+const User = ({ match }) => <div>{match.params.user}</div>
+
+const App = (
+  <BrowserRouter>
+    <div>
+      <ul>
+        <li><Link to="/kim">Kim (dynamic)</Link></li>
+        <li><Link to="/chris">Chris (dynamic)</Link></li>
+      </ul>
+
+      <Route path="/users/:user" component={User} />
+    </div>
+  </BrowserRouter>
+);

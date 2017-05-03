@@ -1,0 +1,9 @@
+const randomBetween0and10 = () =>
+  Math.random() * 10
+
+
+it('callback should be called', () => {
+  Math.random = jest.fn();
+  Math.random.mockReturnValue(0.5);
+  expect(randomBetween0and10()).toBe(5);
+});

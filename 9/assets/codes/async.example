@@ -1,0 +1,8 @@
+const user = { name: 'Paul' };
+
+const getUser = () => Promise.resolve(user);
+
+it('works with promises', async () => {
+  const user = await getUser();
+  expect(user.name).toBe('Paul');
+});

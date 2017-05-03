@@ -1,0 +1,13 @@
+// http://programmers.stackexchange.com/a/123672/121521
+// 假設 ledger.calculate('5 * 7') 會呼叫 calculator.multiply(5,7) 並得到 35
+
+// London schools of TDD
+calculator.multiply = jest.fn();
+
+ledger.calculate('5 * 7');
+
+expect(calculator.multiply).toBeCalledWith(5, 7);
+
+
+// Chicago schools of TDD
+expect(ledger.calculate('5 * 7')).toBe(35);

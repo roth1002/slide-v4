@@ -1,0 +1,13 @@
+jest.useFakeTimers();
+
+it('', () => {
+  const p = new Promise(resolve => {
+    setTimeout(() => {
+      resolve(1234567);
+    }, 60000)
+  });
+
+  jest.runTimersToTime(60000);
+
+  return p.then(number => expect(number).toBe(1234567));
+})

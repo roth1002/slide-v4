@@ -1,0 +1,10 @@
+// add.spec.js
+import add from './add';
+
+assert.equal(add(123, 321), 444, '123 + 321 should equal 444');
+
+
+// add.js
+const add = (a, b) => a + b;
+
+export default add;

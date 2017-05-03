@@ -1,0 +1,17 @@
+function check() {
+  if (a > 1) {
+    if (a === 2) {
+      if (b === 'ya') {
+
+      } else {
+        if (c) {
+          doSomethingA();
+        }
+      }
+    } else {
+      doSomethingB();
+    }
+  } else {
+    doSomethingC();
+  }
+}

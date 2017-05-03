@@ -1,0 +1,21 @@
+import React from 'react';
+import { mount } from 'enzyme';
+
+const Foo = ({ onButtonClick }) => (
+  <button onClick={onButtonClick}>Foo</button>
+);
+const MyComponent = () => (
+  <div><Foo /><Foo /></div>
+);
+
+it('renders three <Foo /> components', () => {
+  const wrapper = mount(<MyComponent />);
+  expect(wrapper.find(Foo).length).toBe(2);
+});
+
+it('simulates click events', () => {
+  const onButtonClick = jest.fn();
+  const wrapper = mount(<Foo onButtonClick={onButtonClick} />);
+  wrapper.find('button').simulate('click');
+  expect(onButtonClick).toBeCalled();
+});
