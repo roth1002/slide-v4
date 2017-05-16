@@ -1,0 +1,5 @@
+[1, 2, 3].map(n => n + 1); // [2, 3, 4];
+
+element.addEventListener('click', (evt) => {
+  // this 跟這 function 外一樣
+});

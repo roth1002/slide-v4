@@ -1,0 +1,10 @@
+<Hello text="Yo" />
+
+
+// 可以在 Hello 裡面接到
+
+class Hello extends React.Component {
+  render() {
+    return <div>{'Hello ' + this.props.text }</div>;
+  }
+}

@@ -1,0 +1,13 @@
+class Hello extends React.Component {
+  render() {
+    return <div>{'Hello ' + this.props.text }</div>;
+  }
+}
+
+// 請養成指定 propTypes 的好習慣，有錯誤他會報給你
+Hello.propTypes = {
+  text: React.PropTypes.string
+};
+
+// 會出現 warning message
+<Hello text={true} />

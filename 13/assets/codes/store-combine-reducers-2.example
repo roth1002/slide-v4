@@ -1,0 +1,10 @@
+// App.js
+import { createStore } from 'redux';
+import { todos, counter } from './reducers';
+
+const reducer = combineReducers({
+  todos,
+  counter
+});
+
+const store = createStore(reducer);

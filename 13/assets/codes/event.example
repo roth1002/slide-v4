@@ -1,0 +1,10 @@
+class Demo extends React.Component {
+  handleClick(event) {
+  // 這裡如果有用到 this 的話，就必須要 bind
+  alert('button was clicked!!!');
+  }
+
+  render() {
+    return <button onClick={this.handleClick.bind(this)}>
+  }
+}

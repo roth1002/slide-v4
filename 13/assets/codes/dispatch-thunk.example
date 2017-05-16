@@ -1,0 +1,11 @@
+function fetchSth(url) {
+  return dispatch => {
+    dispatch(requestStart())
+    return fetch(url)
+      .then(res => res.json())
+      .then(json =>
+        dispatch(requestSuccess(json))
+      )
+      .catch(dispatch(requestFail()))
+  }
+}

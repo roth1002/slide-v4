@@ -1,0 +1,14 @@
+// 最一開始的 state
+const initState = []
+
+const todosReducer = (state = initState, action) => {
+  switch (action.type) {
+    case 'ADD_TODO':
+      const newTodo = {
+        text: action.payload.text,
+      };
+      return [...state, action.payload]
+    default:
+      return state; // 沒有做任何事也要回傳原本的
+  }
+}

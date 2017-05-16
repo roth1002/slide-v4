@@ -1,0 +1,14 @@
+// Input (JSX):
+var app = <Nav color="blue" />;
+// Output (JS):
+var app = React.createElement(Nav, {color:"blue"});
+
+
+// Input (JSX):
+var app = <Nav color="blue"><Profile>click</Profile></Nav>;
+// Output (JS):
+var app = React.createElement(
+  Nav,
+  {color:"blue"},
+  React.createElement(Profile, null, "click")
+);

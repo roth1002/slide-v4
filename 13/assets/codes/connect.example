@@ -1,0 +1,10 @@
+// 讓 component 與 context 裡的 redux store 接觸
+class MyComponent extends React.Component {
+  render() {
+    ...
+  }
+}
+
+export default connect()(MyComponent);
+
+// connect 一共可以帶三個參數: mapStateToProps, mapDispatchToProps, mergeProps

@@ -1,0 +1,10 @@
+// 寫一個 action creator 來產生 action
+
+const addTodo = (todoText) => ({
+  type: 'ADD_TODO',
+  payload: {
+    text: todoText,
+  }
+})
+
+store.dispatch(addTodo('Hellow World!'))

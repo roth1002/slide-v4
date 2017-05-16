@@ -1,0 +1,7 @@
+<!-- 給一個 div 來當 render root，盡量不要直接 render 在 body 上 -->
+<body>
+  <div id="root"></div>
+</body>
+
+
+ReactDOM.render(<Hello />, document.getElementById('root'));

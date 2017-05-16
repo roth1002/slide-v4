@@ -1,0 +1,16 @@
+class Hello extends React.Component {
+  render() {
+    return <div>{'Hello ' + this.props.text }</div>;
+  }
+}
+
+// 指定 default props
+Hello.defaultProps = {
+  text: 'World'
+};
+
+
+
+// 沒有傳就會用預設值
+
+<Hello />
