@@ -7,4 +7,4 @@ class MyComponent extends React.Component {
 
 export default connect()(MyComponent);
 
-// connect 一共可以帶三個參數: mapStateToProps, mapDispatchToProps, mergeProps
+// connect 一共可以帶四個參數: mapStateToProps, mapDispatchToProps, mergeProps, options

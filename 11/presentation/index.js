@@ -392,6 +392,17 @@ export default class Presentation extends React.Component {
           </BgSlide>
           <BgSlide transition={['slide']}>
             <Heading size={5} lineHeight={1} textColor="white">
+              installation
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/react-redux-install.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={5} lineHeight={1} textColor="white">
               Provider
             </Heading>
             <CodePane
@@ -468,12 +479,15 @@ export default class Presentation extends React.Component {
                   reducers: 放各種 reducer
               </ListItem>
               <ListItem>
-                  component: 可以獨立存在的 components
+                  component: 放 presentational components
               </ListItem>
               <ListItem>
-                  container: 跟 redux store connect 的 components
+                  container: 放 container components
               </ListItem>
             </List>
+            <Text>
+              <a href="http://redux.js.org/docs/basics/UsageWithReact.html">Usage with react</a>
+            </Text>
           </BgSlide>
 
           {/* Async */}
