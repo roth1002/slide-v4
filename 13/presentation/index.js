@@ -151,9 +151,6 @@ export default class Presentation extends React.Component {
                   with React
               </ListItem>
               <ListItem>
-                  Middleware
-              </ListItem>
-              <ListItem>
                   Async
               </ListItem>
             </List>
@@ -219,6 +216,9 @@ export default class Presentation extends React.Component {
               </ListItem>
               <ListItem>
                   Store
+              </ListItem>
+              <ListItem>
+                  Middleware
               </ListItem>
             </List>
           </BgSlide>
@@ -319,9 +319,6 @@ export default class Presentation extends React.Component {
             />
           </BgSlide>
           <BgSlide transition={['slide']}>
-            <Heading size={5} lineHeight={1} textColor="white">
-              實際應用上會有多個 reducer，此時就用 combineReducer 組起來
-            </Heading>
             <CodePane
               lang="js"
               source={require("raw!../assets/codes/store-combine-reducers-2.example")}
@@ -333,6 +330,42 @@ export default class Presentation extends React.Component {
             <Heading size={4} lineHeight={2} textColor="white">
               Redux 有諸多限制，但都是為了符合三大原則，讓程式變得更好維護
             </Heading>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Middleware
+            </Heading>
+            <Image src={images.reduxMiddleware.replace('/', '')} style={{ width: '70%' }} />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Middleware
+            </Heading>
+            <Text textColor="primary">
+              對 dispatch 來的東西（可以不用是 action）動手腳
+            </Text>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={5} lineHeight={1} textColor="white">
+              applyMiddleware
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/apply-middleware.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              redux-logger for dev
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/use-redux-logger.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
           </BgSlide>
 
           {/* With React */}
@@ -367,6 +400,14 @@ export default class Presentation extends React.Component {
               margin="0 20px 0"
               textSize="0.6em"
             />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={5} lineHeight={1} textColor="white">
+              connect
+            </Heading>
+            <Text textColor="primary">
+              回傳一個 <a href="https://facebook.github.io/react/docs/higher-order-components.html">High-Order component</a> (傳進去一個 component，回傳一個修飾過的 component)
+            </Text>
           </BgSlide>
           <BgSlide transition={['slide']}>
             <Heading size={5} lineHeight={1} textColor="white">
@@ -415,66 +456,138 @@ export default class Presentation extends React.Component {
               textSize="0.6em"
             />
           </BgSlide>
-
-          {/* Async Action */}
           <BgSlide transition={['slide']}>
-            <Heading size={3} lineHeight={2} textColor="white">
-              Middlewares
+            <Heading size={4} lineHeight={2} textColor="white">
+              常見的 src folder structure
             </Heading>
             <List>
               <ListItem>
-                  Middleware
+                  actions: 放各種 action 和 action creator
               </ListItem>
               <ListItem>
-                  redux-thunk for async
+                  reducers: 放各種 reducer
               </ListItem>
               <ListItem>
-                  redux-logger for dev
+                  component: 可以獨立存在的 components
               </ListItem>
               <ListItem>
-                  other middlewares
+                  container: 跟 redux store connect 的 components
+              </ListItem>
+            </List>
+          </BgSlide>
+
+          {/* Async */}
+          <BgSlide transition={['slide']}>
+            <Heading size={3} lineHeight={2} textColor="white">
+              Async
+            </Heading>
+            <List>
+              <ListItem>
+                  Design
+              </ListItem>
+              <ListItem>
+                  redux-thunk
               </ListItem>
             </List>
           </BgSlide>
           <BgSlide transition={['slide']}>
-            <Heading size={4} lineHeight={2} textColor="white">
-              Middleware
-            </Heading>
-            <Image src={images.reduxMiddleware.replace('/', '')} style={{ width: '70%' }} />
+            <Text textColor="primary">
+              前端資料流中，AJAX 幾乎是最重要的
+            </Text>
+          </BgSlide><BgSlide transition={['slide']}>
+            <Text textColor="primary">
+              但 Redux 本身是同步（synchronous）處理 action
+            </Text>
+            <Text textColor="primary">
+              所以如果要處理非同步，你可以：
+            </Text>
+            <List>
+              <ListItem>
+                1. 在 redux 外面處理
+              </ListItem>
+              <ListItem>
+                2. 把非同步機制整合到 redux 裡面 (今天要討論的)
+              </ListItem>
+            </List>
           </BgSlide>
           <BgSlide transition={['slide']}>
-            <Heading size={4} lineHeight={2} textColor="white">
-              Middleware
-            </Heading>
             <Text textColor="primary">
-              對 dispatch 來的東西（可以不用是 action）動手腳
+              無論採取哪種方法，都要先設計好 actions 和 reducers
+            </Text>
+            <Text textColor="primary">
+              這裡以 AJAX 為範例
             </Text>
           </BgSlide>
           <BgSlide transition={['slide']}>
-            <Heading size={5} lineHeight={1} textColor="white">
-              applyMiddleware
+            <Text textColor="primary">
+              Actions
+            </Text>
+            <List>
+              <ListItem>
+                1. GET_DATA_SUCCESS: 成功要回資料，把資料放在 payload
+              </ListItem>
+              <ListItem>
+                2. GET_DATA_ERROR: 要資料過程發生錯誤，把錯誤訊息放在 error
+              </ListItem>
+              <ListItem>
+                3. GET_DATA_START: 某些情況要讓使用者知道正在請求資料
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Text textColor="primary">
+              Reducers
+            </Text>
+            <List>
+              <ListItem>
+                1. data: 把資料放在 payload，遇到 GET_DATA_SUCCESS 就更新
+              </ListItem>
+              <ListItem>
+                2. isFetching: 是否正在要資料，init=false, 遇到 GET_DATA_START 改為 true，GET_DATA_SUCCESS 和 GET_DATA_ERROR 改為 false
+              </ListItem>
+              <ListItem>
+                3. error: 放錯誤狀態，遇到 GET_DATA_ERROR 就更新
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Text textColor="primary">
+              四個有名的 <a href="https://medium.com/react-native-training/redux-4-ways-95a130da0cdc">redux 非同步處理機制</a>
+            </Text>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              redux-thunk
+            </Heading>
+            <Text textColor="primary">
+              讓使用者可以 dispatch 一個 function
+            </Text>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              redux-thunk: install
             </Heading>
             <CodePane
-              lang="js"
-              source={require("raw!../assets/codes/apply-middleware.example")}
+              lang="bash"
+              source={require("raw!../assets/codes/dispatch-thunk-install.example")}
               margin="0 20px 0"
               textSize="0.6em"
             />
           </BgSlide>
           <BgSlide transition={['slide']}>
             <Heading size={4} lineHeight={2} textColor="white">
-              redux-thunk for async
+              redux-thunk: setup middleware
             </Heading>
             <CodePane
               lang="js"
-              source={require("raw!../assets/codes/use-redux-thunk.example")}
+              source={require("raw!../assets/codes/redux-thunk-setup-middleware.example")}
               margin="0 20px 0"
               textSize="0.6em"
             />
           </BgSlide>
           <BgSlide transition={['slide']}>
             <Heading size={4} lineHeight={2} textColor="white">
-              redux-thunk for async
+              redux-thunk: new action creator
             </Heading>
             <CodePane
               lang="js"
@@ -485,44 +598,76 @@ export default class Presentation extends React.Component {
           </BgSlide>
           <BgSlide transition={['slide']}>
             <Heading size={4} lineHeight={2} textColor="white">
-              <a href="http://chentsulin.github.io/redux/docs/advanced/AsyncActions.html">更詳細的介紹</a>
-            </Heading>
-          </BgSlide>
-          <BgSlide transition={['slide']}>
-            <Heading size={4} lineHeight={2} textColor="white">
-              redux-logger for dev
+              redux-thunk: use it everywhere
             </Heading>
             <CodePane
               lang="js"
-              source={require("raw!../assets/codes/use-redux-logger.example")}
+              source={require("raw!../assets/codes/dispatch-thunk-usage.example")}
               margin="0 20px 0"
               textSize="0.6em"
             />
           </BgSlide>
           <BgSlide transition={['slide']}>
             <Heading size={4} lineHeight={2} textColor="white">
-              other middlewares
+              <a href="http://chentsulin.github.io/redux/docs/advanced/AsyncActions.html">更詳細的介紹</a>
             </Heading>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Text textColor="primary">
+              redux-thunk 簡單易用，但有一些問題
+            </Text>
             <List>
               <ListItem>
-                <Text textColor="primary">
-                  <a href="https://github.com/gaearon/redux-devtools">redux-devtools</a>
-                </Text>
+                1. 不好測試，尤其對一些複雜的流程（例如登入登出）
               </ListItem>
               <ListItem>
-                <Text textColor="primary">
-                  <a href="https://github.com/acdlite/redux-promise">redux-promise</a>
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  <a href="https://github.com/yelouafi/redux-saga">redux-saga</a>: a powerful side effect model
-                </Text>
+                2. 不容易中止非同步的 action
               </ListItem>
             </List>
           </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Text textColor="primary">
+              於是有了 redux-saga
+            </Text>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Text textColor="primary">
+              已經對 redux async 駕輕就熟的同學，可以參考<a href="https://denny.qollie.com/2016/05/14/redux-saga/">這裡</a>
+            </Text>
+          </BgSlide>
 
-
+          <BgSlide transition={['slide']}>
+            <Heading size={5} lineHeight={2} textColor="white">
+              淺談 redux 的設計和實作流程
+            </Heading>
+            <List>
+              <ListItem>
+                1. 思考頁面要呈現什麼給使用者
+              </ListItem>
+              <ListItem>
+                2. 思考 store （reducer）裡面要有什麼
+              </ListItem>
+              <ListItem>
+                3. 思考 store 會因應什麼樣的 action 而改變
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={5} lineHeight={2} textColor="white">
+              淺談 redux 的設計和實作流程 - 續
+            </Heading>
+            <List>
+              <ListItem>
+                4. 定義 action 並寫 action creator
+              </ListItem>
+              <ListItem>
+                5. 實作 reducer
+              </ListItem>
+              <ListItem>
+                6. 把 store 裡的資料和 UI 接在一起
+              </ListItem>
+            </List>
+          </BgSlide>
         </Deck>
       </Spectacle>
     );
