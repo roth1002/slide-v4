@@ -1,0 +1,17 @@
+const mapStateToProps = ...
+
+const mapDispatchToProps = dispatch => ({
+  addTodo: text => { dispatch(addTodoActionCreator(text)) },
+})
+
+class MyComponent extends React.Component {
+  render() {
+    const { todos, addTodo } = this.props;
+    return <button onClick={() => addTodo(...)}>
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(MyComponent);

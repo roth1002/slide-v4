@@ -1,0 +1,9 @@
+switch (action.type) {
+  case 'ADD_TODO':
+    const newTodo = {
+      text: action.payload.text,
+    };
+    // 不要直接改變原本的 state
+    return state.push(newTodo); // 錯誤的寫法，千萬不要學
+  ...
+}

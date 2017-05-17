@@ -1,0 +1,7 @@
+let a = 10 * Math.random();
+let b = 20;
+if (a > 5) {
+  let b = 50;
+  console.log(b); // 50
+}
+console.log(b); // 20

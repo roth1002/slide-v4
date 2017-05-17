@@ -1,0 +1,12 @@
+// 把 store 傳進整個 react app 的 context 裡
+// App.js
+const App = (
+  <Provider store={store}>
+    <MyRootComponent>
+  </Provider>
+);
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root'),
+);

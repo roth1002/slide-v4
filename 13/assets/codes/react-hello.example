@@ -1,0 +1,10 @@
+// React.createClass 是舊的語法
+class Hello extends React.Component {
+
+  // 一定要有一個 render 方法
+
+  render() {
+    // 回傳很像是 html 的 jsx
+    return <div>Hello World</div>;
+  }
+}

@@ -1,0 +1,15 @@
+// 將三種 props 合在一起傳給 Component
+
+function mergeProps(stateProps, dispatchProps, parentProps) {
+  return {
+    ...stateProps,
+    ...dispatchProps,
+    ...parentProps, // 這樣就可以讓 parentProps 蓋掉其他兩個
+  }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+    mergeProps
+)(MyDumbComponent)

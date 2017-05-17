@@ -1,0 +1,15 @@
+const mapStateToProps = state => ({
+  todos: state.todos,
+})
+
+class MyComponent extends React.Component {
+  render() {
+    const { todos } = this.props;
+    // 這個 todos 就是從 store 裡面來的
+    ...
+  }
+}
+
+export default connect(
+  mapStateToProps,
+)(MyComponent);

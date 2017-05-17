@@ -1,0 +1,5 @@
+// 要小心，因為 class 跟 for 在 js 裡面是關鍵字
+// 所以要寫成 className 跟 htmlFor：
+
+<div className="foo" />
+<label htmlFor="username">Username</label>

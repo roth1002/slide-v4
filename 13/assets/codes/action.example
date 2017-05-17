@@ -1,0 +1,7 @@
+// 以一個 js object 描述一個 action
+{
+  type: 'ADD_TODO', // 告訴 reducer 動作的名稱
+  payload: {        // 跟這個 action 相關的訊息
+    text: 'Hello world',
+  }
+}

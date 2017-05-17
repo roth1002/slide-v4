@@ -1,0 +1,3 @@
+import fetchSth from './actionCreators';
+
+store.dispach(fetchSth('http://www.someurl.com'))
