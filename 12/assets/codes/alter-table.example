@@ -1,0 +1,5 @@
+ALTER TABLE users ADD description VARCHAR(255);
+
+ALTER TABLE users MODIFY description TEXT;
+
+ALTER TABLE users DROP description;
