@@ -92,7 +92,7 @@ Individual，題目自訂，須依照一些前面教過的基本架構
 - Middleware
 - react-redux
 
-## W12: Database (5/24 Calvin)
+## W12: Database (5/24 chentsulin)
 - ACID
 - CAP
 - RDBMS
@@ -100,8 +100,8 @@ Individual，題目自訂，須依照一些前面教過的基本架構
 - 提醒 HW3
 
 ## W13: Backend framework (5/31 kpman)
-- Express Blog
-- Routing (RESTful)
+- SQL builder
+- Cookie, Session
 - MVC
 
 ## W14: Other Backend Good stuff (6/7 chentsulin)
