@@ -201,7 +201,7 @@ export default class Presentation extends React.Component {
               </ListItem>
               <ListItem>
                 <Text textColor="primary">
-                  隔離性 (isolation)：當兩個或者多個 transition 同時進行（查詢或修改）資料庫的同一數據時所表現出的相互關係
+                  隔離性 (isolation)：多個並發事務同時對數據進行讀寫修改的能力，可以防止由於交叉執行而導致數據的不一致。
                 </Text>
               </ListItem>
               <ListItem>
@@ -1020,6 +1020,28 @@ export default class Presentation extends React.Component {
               src={images.mom.replace('/', '')}
               style={{ width: '100%' }}
             />
+          </BgSlide>
+
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              延伸閱讀
+            </Heading>
+            <List style={{ listStylePosition: 'inherit' }}>
+              <ListItem>
+                <Text textColor="primary">
+                  <Link href="http://blog.jobbole.com/100349/" target="_blank">
+                    如果有人问你数据库的原理，叫他看这篇文章
+                  </Link>
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  <Link href="http://www.sqlstyle.guide/" target="_blank">
+                    SQL Style Guide
+                  </Link>
+                </Text>
+              </ListItem>
+            </List>
           </BgSlide>
         </Deck>
       </Spectacle>
