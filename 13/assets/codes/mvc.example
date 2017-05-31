@@ -1,0 +1,14 @@
+/** 模擬 Model, View, Controller */
+var M = {}, V = {}, C = {};
+
+/** Model 負責存放資料 */
+M.data = "hello world";
+
+/** View 負責將資料輸出到螢幕上 */
+V.render = (M) => { alert(M.data); }
+
+/** Controller 作為一個 M 和 V 的橋樑 */
+C.handleOnload = () => { V.render(M); }
+
+/** 在網頁讀取的時候呼叫 Controller */
+window.onload = C.handleOnload;

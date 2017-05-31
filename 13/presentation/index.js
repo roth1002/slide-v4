@@ -480,6 +480,17 @@ export default class Presentation extends React.Component {
           </BgSlide>
           <BgSlide transition={['slide']}>
             <Heading size={4} lineHeight={2} textColor="white">
+              MVC mini example
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/mvc.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
               MVC Pros
             </Heading>
             <List>
@@ -505,9 +516,6 @@ export default class Presentation extends React.Component {
               MVC Cons
             </Heading>
             <List>
-              <ListItem>
-                不適用於小型專案
-              </ListItem>
               <ListItem>
                 管理文件增加
               </ListItem>
@@ -549,7 +557,7 @@ export default class Presentation extends React.Component {
             </Heading>
             <List>
               <ListItem>
-                server 發送 Sookie 到 clien 端
+                server 發送 Set-Cookie 到 client 端
               </ListItem>
               <ListItem>
                 瀏覽器儲存 Cookie
@@ -738,7 +746,14 @@ export default class Presentation extends React.Component {
                 安全性較佳
               </ListItem>
               <ListItem>
-                connect 套件使用此方法實作
+                <Link
+                  href="https://github.com/senchalabs/connect"
+                  target="_blank"
+                >
+                  connect
+                </Link>
+                {' '}
+                套件使用此方法實作
               </ListItem>
             </List>
           </BgSlide>
