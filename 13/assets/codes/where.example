@@ -1,0 +1,10 @@
+/* Key, Value */
+knex.select('*').from('books').where('author', 'Test')
+// select * from `books` where `author` = 'Test'
+
+/* Object Syntax */
+knex('users').where({
+  first_name: 'Test',
+  last_name:  'User'
+}).select('id')
+// select `id` from `users` where `first_name` = 'Test' and `last_name` = 'User'

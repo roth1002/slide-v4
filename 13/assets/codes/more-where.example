@@ -1,0 +1,8 @@
+knex('users').where('id', 1).orWhere({votes: 100, user: 'knex'})
+// select * from `users` where `id` = 1 or (`votes` = 100 and `user` = 'knex')
+
+knex('users').whereNot({
+  first_name: 'Test',
+  last_name:  'User'
+}).select('id')
+// select `id` from `users` where not `first_name` = 'Test' and not `last_name` = 'User'

@@ -1,0 +1,9 @@
+knex('users')
+.join('contacts', 'users.id', '=', 'contacts.user_id')
+.select('users.id', 'contacts.phone')
+// select `users`.`id`, `contacts`.`phone` from `users` inner join `contacts` on `users`.`id` = `contacts`.`user_id`
+
+knex('users')
+.join('contacts', 'users.id', 'contacts.user_id')
+.select('users.id', 'contacts.phone')
+// select `users`.`id`, `contacts`.`phone` from `users` inner join `contacts` on `users`.`id` = `contacts`.`user_id`

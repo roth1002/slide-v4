@@ -1,0 +1,11 @@
+const sessionData = {
+  username: 'kpman',
+  age: 18,
+  company: 'NTU',
+  location: 'Taipei'
+};
+
+const signed = sign(sessionData, 'SOME_SECRET_KEY');
+
+// Set-Cookie
+session_data = signed;

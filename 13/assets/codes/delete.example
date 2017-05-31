@@ -1,0 +1,4 @@
+knex('accounts')
+.where('activated', false)
+.del()
+// delete from `accounts` where `activated` = false

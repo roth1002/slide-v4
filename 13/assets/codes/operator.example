@@ -1,0 +1,5 @@
+knex('users').where('columnName', 'like', '%rowlikeme%')
+// select * from `users` where `columnName` like '%rowlikeme%'
+
+knex('users').where('votes', '>', 100)
+// select * from `users` where `votes` > 100

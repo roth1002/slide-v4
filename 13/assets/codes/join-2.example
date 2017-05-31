@@ -1,0 +1,5 @@
+knex.select('*').from('users').join('accounts', {'accounts.id': 'users.account_id'})
+// select * from `users` inner join `accounts` on `accounts`.`id` = `users`.`account_id`
+
+knex.select('*').from('users').join('accounts', 'accounts.type', knex.raw('?', ['admin']))
+// select * from `users` inner join `accounts` on `accounts`.`type` = 'admin'

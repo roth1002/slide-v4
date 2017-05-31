@@ -1,0 +1,4 @@
+$ npm install knex --save
+$ yarn add knex
+
+$ npm install mysql // optional

@@ -1,0 +1,7 @@
+# groupBy
+knex('users').groupBy('count')
+// select * from `users` group by `count`
+
+# orderBy
+knex('users').orderBy('name', 'desc')
+// select * from `users` order by `name` desc

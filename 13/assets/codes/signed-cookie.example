@@ -1,0 +1,13 @@
+{ dotcom_user: 'kpman' }
+
+const singed = crypto
+    .createHmac('sha256', 'this_is_my_secret_and_fuck_you_all')
+    .update('kpman')
+    .digest('hex');
+// ce82eb78c01444bcce1247c88d92173ccbafde9134a94a99d47f71c5ac431800
+
+// Set-Cookie
+{
+  dotcom_user: 'kpman',
+  'dotcom_user.sig': signed
+}

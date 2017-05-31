@@ -1,3 +1,0 @@
-fetch('/users.json').then(response => {
-  // fetch 本身會回傳 promise
-});

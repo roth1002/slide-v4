@@ -1,0 +1,5 @@
+knex.select('email', 'name').from('users').clearSelect()
+// select * from `users`
+
+knex.select('email', 'name').from('users').where('id', 1).clearWhere()
+// select `email`, `name` from `users`

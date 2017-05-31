@@ -1,0 +1,7 @@
+knex.select().from('books')
+// select * from `books`
+
+knex.select('title', 'author', 'year').from('books')
+// select `title`, `author`, `year` from `books`
+
+knex.select(['title', 'author', 'year']).from('books')
