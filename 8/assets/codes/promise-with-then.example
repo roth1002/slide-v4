@@ -1,0 +1,12 @@
+const handleResolved = () => {}
+const handleRejected = () => {}
+
+new Promise((resolve, reject) => {
+  try {
+	const data = getData();
+    resolve(data);
+  } catch (err) {
+  	reject(err);
+  }
+})
+.then(handleResolved, handleRejected);

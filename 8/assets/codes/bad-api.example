@@ -1,0 +1,9 @@
+// bad-api
+
+/getDevice
+/getDeviceList
+/getDevices
+/getMyDevice
+/getOtherDevice
+/updateDeviceList
+/addNewDevice

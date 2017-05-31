@@ -1,0 +1,7 @@
+// RESTful
+
+GET /devices
+POST /devices/
+GET /devices/123
+PUT /devices/123
+DELETE /devices/123

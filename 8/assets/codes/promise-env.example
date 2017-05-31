@@ -1,0 +1,6 @@
+// npm i --save babel-polyfill isomorphic-fetch
+
+// 引用方式 (Webpack + Babel ES2015)
+import 'babel-polyfill';
+
+import fetch from 'isomorphic-fetch';

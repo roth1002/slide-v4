@@ -1,0 +1,8 @@
+new Promise((resolve, reject) => {
+  try {
+  	let data; // then do something in sync
+  	resolve(data);
+  } catch (err) {
+  	reject(err);
+  }
+});

@@ -1,0 +1,7 @@
+fetch('/users.html')
+  .then(response => {
+    return response.text();
+  })
+  .then(body => {
+    document.body.innerHTML = body;
+  });

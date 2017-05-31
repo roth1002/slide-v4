@@ -1,0 +1,5 @@
+- Filter
+- Sorting
+- Searching
+
+GET /tickets?q=return&state=open&sort=-prority,created_at
