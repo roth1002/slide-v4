@@ -1,0 +1,23 @@
+/**
+ * PART 2
+ */
+const knex = require('knex')({ client: 'mysql' });
+const bs = knex('midterm_exam')
+  .where({ Name: 'Amy', Subject: 'Math2', Score: 150 })
+  .del()
+  .toString();
+
+const mysql = require('mysql');
+const connection = mysql.createConnection({
+  host: '127.0.0.1',
+  user: 'kpman',
+  database: 'test',
+});
+
+connection.connect();
+
+connection.query(bs, function(error, results, fields) {
+  if (error) throw error;
+  console.log(results);
+  process.exit(0);
+});

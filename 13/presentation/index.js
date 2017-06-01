@@ -330,6 +330,39 @@ export default class Presentation extends React.Component {
               textSize="0.6em"
             />
           </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              mysql
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/mysql.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              mysql-knex
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/mysql-knex.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              knex
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/knex.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
 
           {/* =================================
             MVC

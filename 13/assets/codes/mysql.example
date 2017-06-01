@@ -1,0 +1,21 @@
+/**
+ * PART 1
+ */
+const mysql = require('mysql');
+const connection = mysql.createConnection({
+  host: '127.0.0.1',
+  user: 'kpman',
+  database: 'test',
+});
+
+connection.connect();
+
+connection.query('SELECT `Name`, `Score` FROM midterm_exam', function(
+  error,
+  results,
+  fields
+) {
+  if (error) throw error;
+  console.log(results);
+  process.exit(0);
+});
