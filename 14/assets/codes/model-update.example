@@ -1,0 +1,14 @@
+// will not return document
+Model.update();
+
+// update a single document & return to application
+Model.findOneAndUpdate();
+
+// document base update
+Model.findById(id, (err, doc) => {
+  if (err) return handleError(err);
+  doc.size = 'large';
+  doc.save((err, updatedDoc) => {
+  // do something;
+  })
+});

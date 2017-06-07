@@ -1,0 +1,6 @@
+// use Model to create and save to DB
+Model.create();
+
+// use instance and save to DB
+const doc = new Model({ name: 'web-seminar' });
+doc.save();

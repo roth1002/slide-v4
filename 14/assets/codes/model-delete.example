@@ -1,0 +1,7 @@
+Model.remove();
+
+Model.findByIdAndRemove();
+http://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove
+
+Model.findOneAndRemove();
+http://mongoosejs.com/docs/api.html#model_Model.findOneAndRemove
